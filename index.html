@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="SoundClear Speaker Cleaner helps you test and clean speaker output using a gentle audio sweep."
+    />
+    <title>SoundClear Speaker Cleaner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel">
+        <div class="badge">SoundClear</div>
+        <h1>Speaker Cleaner</h1>
+        <p class="subtitle">
+          A quick, mobile-friendly way to test and refresh your speaker with a
+          safe tone sweep.
+        </p>
+
+        <div class="controls">
+          <label class="field" for="modeSelect">
+            <span>Mode</span>
+            <select id="modeSelect">
+              <option value="quick">Quick Clean</option>
+              <option value="deep">Deep Clean</option>
+            </select>
+          </label>
+
+          <label class="field" for="volumeRange">
+            <span>Volume</span>
+            <div class="range-wrap">
+              <input id="volumeRange" type="range" min="1" max="100" value="55" />
+              <strong id="volumeLabel">55%</strong>
+            </div>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="startBtn" class="primary">Start Cleaning</button>
+          <button id="stopBtn" class="secondary" type="button">Stop</button>
+        </div>
+
+        <div class="status-card" aria-live="polite">
+          <span class="status-dot"></span>
+          <p id="statusText">Ready: press start to begin a cleaning cycle.</p>
+        </div>
+
+        <div class="tips">
+          <h2>How to use</h2>
+          <ol>
+            <li>Place the speaker facing upward.</li>
+            <li>Tap “Start Cleaning”.</li>
+            <li>Keep the volume at a moderate level.</li>
+            <li>Stop once the sweep finishes.</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
